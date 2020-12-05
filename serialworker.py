@@ -1,6 +1,7 @@
 import serial
 import time
 import multiprocessing
+from cobs import cobs
 
 ## Change this to match your local settings
 SERIAL_PORT = '/dev/ttyACM1'
@@ -32,9 +33,9 @@ class SerialProcess(multiprocessing.Process):
             # look for incoming tornado request
             if not self.input_queue.empty():
                 data = self.input_queue.get()
- 
                 # send it to the serial device
                 self.writeSerial(data)
+
                 print "writing to serial: " + data
  
             # look for incoming serial data

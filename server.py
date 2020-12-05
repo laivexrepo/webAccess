@@ -9,6 +9,7 @@ import time
 import multiprocessing
 import serialworker
 import json
+from cobs import cobs
  
 define("port", default=8080, help="run on the given port", type=int)
  
@@ -43,7 +44,7 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
         clients.remove(self)
 
 
-## check the queue for pending messages, and rely that to all connected clients
+## check the queue for pending messages, and relay that to all connected clients
 def checkQueue():
 	if not output_queue.empty():
 		message = output_queue.get()
