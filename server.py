@@ -27,6 +27,10 @@ class IndexHandler(tornado.web.RequestHandler):
 class StaticFileHandler(tornado.web.RequestHandler):
 	def get(self):
 		self.render('main.js')
+
+class StaticFileHandler(tornado.web.RequestHandler):
+	def get(self):
+		self.render('mainip.js')
  
 class WebSocketHandler(tornado.websocket.WebSocketHandler):
     def open(self):
