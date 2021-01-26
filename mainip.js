@@ -3,7 +3,7 @@ $(document).ready(function(){
 var received = $('#received');
 
 
-var socket = new WebSocket("ws://192.168.1.145:8080/ws");
+var socket = new WebSocket("ws://192.168.1.151:8080/ws");
  
 socket.onopen = function(){  
   console.log("connected"); 
@@ -11,8 +11,10 @@ socket.onopen = function(){
 
 socket.onmessage = function (message) {
   console.log("receiving: " + message.data);
-  received.append(message.data);
-  received.append($('<br/>'));
+//  received.append(message.data);
+//  received.append($('<br/>'));
+  terminal.append(message.data);
+  terminal.append($('<br/>'));
 };
 
 socket.onclose = function(){
