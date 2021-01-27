@@ -72,6 +72,7 @@ if __name__ == '__main__':
 	        (r"/static/(.*)", tornado.web.StaticFileHandler, {'path':  './'}),
                 (r"/xterm/lib/(.*)", tornado.web.StaticFileHandler, {"path": "./xterm/lib/"}),
                 (r"/xterm-addon-attach/lib/(.*)", tornado.web.StaticFileHandler, {"path": "./xterm-addon-attach/lib/"}),
+                (r"/xterm-addon-fit/lib/(.*)", tornado.web.StaticFileHandler, {"path": "./xterm-addon-fit/lib/"}),
                 (r"/xterm/css/(.*)", tornado.web.StaticFileHandler, {"path": "./xterm/css/"}),
 	        (r"/ws", WebSocketHandler)
 	    ]
