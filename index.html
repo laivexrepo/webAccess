@@ -20,7 +20,7 @@
 	const attachAddon = new AttachAddon.AttachAddon(socket);
 	//const attachAddon = new AttachAddon(socket);
         const fitAddon = new FitAddon.FitAddon();
-
+       
         //var term = new Terminal();
 	term.loadAddon(attachAddon);
 	term.loadAddon(fitAddon);
@@ -30,6 +30,7 @@
         fitAddon.fit();
 
         term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
+
       </script>
     </body>
   </html>

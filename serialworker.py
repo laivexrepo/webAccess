@@ -1,4 +1,4 @@
-# Serialworker.py code whic hinterface with the serial port
+# Serialworker.py code which interfaces with the serial port
 # connected to the VEX V5 system
 import serial
 import time
